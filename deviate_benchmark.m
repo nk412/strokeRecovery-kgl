@@ -1,7 +1,9 @@
 test=csvread('..\train.csv',1,0);
 ysall=[];
 xsall=[];
-for signatureID=1:605
+figure
+%for signatureID=1:605
+for signatureID=1:10
     signatureID
     signatureLength=sum(test(:,2)==signatureID);
     signatureLength
@@ -11,6 +13,7 @@ for signatureID=1:605
     end
     image=imread(['..\images\',filename,'.jpg']);
     binary=IM2BW(image,0.9);
+    imagesc(binary);
     zhang=Skeleton(~binary);
     [r,c,v]=find(zhang);
     x=(mean(c)-min(c))/(max(c)-min(c));

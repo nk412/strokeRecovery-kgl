@@ -1,0 +1,15 @@
+function RMSE(file1, file2)
+%Returns the root mean square error between two files of the stroke competition submission format
+%RMSE=sqrt(mean((y-y_pred).^2));
+
+
+a=csvread(file1,1,0);
+b=csvread(file2,1,0);
+
+
+for rowcount=1:size(a,1)
+    rowcount
+end
+
+
+return;

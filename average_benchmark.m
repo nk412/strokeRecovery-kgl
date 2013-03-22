@@ -1,4 +1,4 @@
-test=csvread('..\train.csv',1,0);
+test=csvread('..\test.csv',1,0);
 ysall=[];
 xsall=[];
 for signatureID=1:605
